@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE Adresar SYSTEM "Adresar.dtd">
+<?xml-stylesheet type ="text/xsl" href ="adresar.xsl"?>
+
+
+<Adresar>
+  <Osoba jmbg="jmbg-0309997715161">
+    <punoIme>
+      <ime>Ljubica</ime>
+      <prezime>Zivancevic</prezime>
+    </punoIme>
+    <datumRodjenja>
+      <dan>3</dan>
+      <mesec>9</mesec>
+      <godina>1997</godina>
+    </datumRodjenja>
+    <adresa tip="stalna">
+      <ulica>Jumbina</ulica>
+      <broj>40</broj>
+      <grad>Beograd</grad>
+      <drzava>Srbija</drzava>
+    </adresa>
+    <telefon tip="mobilni">065/111-222</telefon>
+    <email tip="privatni">buba.zivancevic@gmail.com</email>
+    <email tip="sluzbeni">ljubica.zivancevic@gmail.com</email>
+  </Osoba>
+  
+  <Osoba jmbg="jmbg-2206997057520">
+    <punoIme>
+      <ime>Milica</ime>
+      <srednjeIme>Jelena</srednjeIme>
+      <prezime>Markovic</prezime>
+      <prezime>Marinkovic</prezime>
+    </punoIme>
+    <datumRodjenja>
+      <dan>22</dan>
+      <mesec>6</mesec>
+      <godina>2004</godina>
+    </datumRodjenja>
+    <adresa tip="stalna">
+      <ulica>Hilandarska</ulica>
+      <broj>1</broj>
+      <grad>Beograd</grad>
+      <drzava>Srbija</drzava>
+    </adresa>
+    <telefon tip="mobilni">062/110-775</telefon>
+    <email tip="privatni">milica@gmail.com</email>
+  </Osoba>
+  
+  <Osoba jmbg="jmbg-1207953002255">
+    <punoIme>
+      <ime>Danica</ime>
+      <prezime>Maric</prezime>
+    </punoIme>
+    <datumRodjenja>
+      <dan>12</dan>
+      <mesec>7</mesec>
+      <godina>1953</godina>
+    </datumRodjenja>
+    <adresa tip="stalna">
+      <ulica>Palih boraca</ulica>
+      <broj>21</broj>
+      <grad>Beograd</grad>
+    </adresa>
+    <telefon tip="fiksni">011/806-123</telefon>
+    <email tip="privatni">danica@gmail.com</email>
+  </Osoba>
+    
+  <Kompanija pib="pib-100001958">
+    <naziv>Soko Štark d.o.o</naziv>
+    <adresa>
+      <ulica>Bulevar Peka Dapčevića</ulica>
+      <broj>29</broj>
+      <grad>Beograd</grad>
+      <drzava>Srbija</drzava>
+    </adresa>
+    <telefon tip="mobilni">065/615-558</telefon>
+    <email tip="sluzbeni">stark@gmail.com</email>
+    <email tip="sluzbeni">kontaktcentarSRB@atlanticgrupa.com</email>
+  </Kompanija>
+ 
+  <Kompanija pib="pib-102201954">
+    <naziv>Dunav osiguranje</naziv>
+    <adresa tip="privremena">
+      <ulica>Makedonska</ulica>
+      <broj>4</broj>
+      <grad>Beograd</grad>
+      <drzava>Srbija</drzava>
+    </adresa>
+    <telefon tip="fiksni">011/322-001</telefon>
+  <email tip="sluzbeni">dunav@gmail.com</email>
+  </Kompanija>
+
+  <Kompanija pib="pib-103231954">
+    <naziv>Komercijalna banka a.d</naziv>
+    <adresa tip="stalna">
+      <ulica>Svetog Save</ulica>
+      <broj>14</broj>
+      <grad>Beograd</grad>
+    </adresa>
+    <telefon tip="fiksni">011/322-001</telefon>
+    <email tip="sluzbeni"> posta@kombank.com</email>
+  </Kompanija>
+
+  <Kompanija pib="pib-103331954">
+    <naziv>Inter sport</naziv>
+    <adresa tip="stalna">
+      <ulica>Partizanske Avijacije</ulica>
+      <broj>24e</broj>
+      <grad>Beograd</grad>
+    </adresa>
+    <telefon tip="mobilni">062/112-556</telefon>
+    <email tip="privatni"> menager@inter.com</email>
+  </Kompanija>
+</Adresar>

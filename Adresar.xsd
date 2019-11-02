@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:mstns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="Adresar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Osoba" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="punoIme">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ime">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="3" />
+                          <xs:maxLength value="30" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="srednjeIme" type="xs:string" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="prezime" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="datumRodjenja">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="dan">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:positiveInteger">
+                          <xs:minInclusive value="1"/>
+                          <xs:maxInclusive value="31"/>
+                        </xs:restriction>
+                      </xs:simpleType> 
+                    </xs:element>
+                    <xs:element name="mesec">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:positiveInteger">
+                          <xs:minInclusive value="1"/>
+                          <xs:maxInclusive value="12"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="godina" type="xs:positiveInteger"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="adresa">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ulica" type="Adresa"></xs:element>
+                    <xs:element name="broj" type="Adresa"></xs:element>
+                    <xs:element name="grad" type="Adresa"></xs:element>
+                    <xs:element name="drzava" type="Adresa"></xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="telefon">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="\d\d\d/[0-9]{3}-[0-9]{3}"></xs:pattern> 
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="[a-z] {1,20}@[a-z]{4,8}.com"></xs:pattern>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="jmbg" type="xs:ID" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Kompanija">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="naziv"/>
+              <xs:element name="adresa">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ulica" type="Adresa"></xs:element>
+                    <xs:element name="broj" type="Adresa"></xs:element>
+                    <xs:element name="grad" type="Adresa"></xs:element>
+                    <xs:element name="drzava" type="Adresa"></xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="telefon">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="[0-9]{3}/[0-9]{3}-[0-9]{3}"></xs:pattern>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="[a-z] {1,20}@[a-z]{4,8}.com"></xs:pattern>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="pib" type="xs:ID" use="required" /> 
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="Adresa">
+    <xs:sequence>
+      <xs:element name="ulica" type="xs:string"></xs:element>
+      <xs:element name="broj" type="xs:integer"></xs:element>
+      <xs:element name="grad" type="xs:string"></xs:element>
+      <xs:element name="drzava" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
